@@ -1,0 +1,95 @@
+/* general */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* utilities */
+.container{
+  width: 500px;
+  margin: 100px auto;
+
+}
+
+.c-flex{
+  display: flex;
+}
+
+/* main */
+.main-wrapper{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* la card contiene l'img e la nav dell'album */
+.card{
+  height: 100%;
+  position: relative;
+}
+
+.img-displayed{
+  width: 400px;
+  height: 250px;
+  object-fit: cover;
+  display: none;
+}
+
+.img-displayed.active{
+  display: inline-block;
+}
+
+.img-prewiev{
+  height: 250px;
+  width: 100px;
+  flex-direction: column;
+}
+
+.miniature{
+  width: 100px;
+  height: 50px;
+  object-fit: cover;
+  filter: brightness(0.3);
+}
+
+.miniature.active{
+  filter: brightness(1);
+  border: 1px solid gray;
+}
+
+/* frecce */
+.arrow{
+  cursor: pointer;
+  text-align: center;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  line-height: 25px;
+  background-color: white;
+  opacity: 0.5;
+  position: absolute;
+}
+
+.arrow:hover{
+  opacity: 1;
+}
+
+.arrow.up{
+  top: 10px;
+  right: 25px;
+  transform: translateX(-50%);
+}
+
+.arrow.down{
+  bottom: 10px;
+  right: 25px;
+  transform: translateX(-50%);
+}
+
+/* empty bar */
